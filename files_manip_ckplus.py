@@ -10,6 +10,7 @@ origin_path = r"C:\tmp\Face_dataset\ck+simplecropeddata\VideoGreaterThan8"
 i = 0
 for root, dirs, files in os.walk(origin_path):
     for file in files:
+        # converts all PNG images in a folder to RGB jpg
         if file.endswith('.png') or file.endswith('.PNG'):
             fullpath = os.path.join(root, file)
             im = Image.open(fullpath)
